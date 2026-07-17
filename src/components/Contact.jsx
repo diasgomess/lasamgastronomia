@@ -57,10 +57,10 @@ export default function Contact() {
             </div>
             <div className="text-center">
               <p className="text-xs font-medium uppercase tracking-wider text-sam-gold/60">
-                E-mail
+                LOCALIZAÇÃO
               </p>
               {/* PLACEHOLDER: substituir pelo e-mail real */}
-              <p className="mt-1 text-sam-gold">{siteConfig.email}</p>
+              <p className="mt-1 text-sam-gold">{siteConfig.local}</p>
             </div>
           </div>
 

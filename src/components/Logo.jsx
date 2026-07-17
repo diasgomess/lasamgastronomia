@@ -8,10 +8,10 @@
  */
 export default function Logo({ variant = 'dark', className = '', size = 'md' }) {
   const sizes = {
-    sm: { width: 120, height: 48, scriptSize: 22, labelSize: 8 },
-    md: { width: 160, height: 64, scriptSize: 28, labelSize: 9 },
-    lg: { width: 200, height: 80, scriptSize: 34, labelSize: 10 },
-  }
+  sm: { width: 200, height: 80, scriptSize: 36, labelSize: 12 },
+  md: { width: 280, height: 112, scriptSize: 50, labelSize: 15 },
+  lg: { width: 360, height: 144, scriptSize: 64, labelSize: 18 },
+}
 
   const s = sizes[size] || sizes.md
 

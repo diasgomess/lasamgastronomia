@@ -26,7 +26,7 @@ const galleryImages = [
     spanClass: 'sm:col-span-1 sm:row-span-1',
   },
   {
-    src: '/images/image5.jpeg',
+    src: '/images/image9.jpeg',
     spanClass: 'sm:col-span-1 sm:row-span-1',
   },
   {
@@ -38,9 +38,17 @@ const galleryImages = [
     spanClass: 'sm:col-span-1 sm:row-span-1',
   },
   {
-    src: '/images/image6.jpeg',
+    src: '/images/image10.jpeg',
     spanClass: 'sm:col-span-1 sm:row-span-1',
   },
+  {
+    src: '/images/image11.jpeg',
+    spanClass: 'sm:col-span-1 sm:row-span-1',
+  },
+  {
+    src: '/images/image6.jpeg',
+    spanClass: 'sm:col-span-1 sm:row-span-1',
+  }
 ]
 
 function GalleryItem({ image, index, onOpen }) {

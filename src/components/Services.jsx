@@ -2,35 +2,36 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const services = [
   {
-    icon: '',
-    title: 'Festas de Aniversário',
-    description: 'Celebre com um cardápio personalizado para todas as idades',
-  },
-  {
-    icon: '',
-    title: 'Happy Hour',
-    description: 'Petiscos e drinks para descontrair com estilo',
-  },
-  {
-    icon: '',
-    title: 'Coffee Break',
-    description: 'Opções sofisticadas para reuniões e eventos corporativos',
-  },
-  {
-    icon: '',
-    title: 'Eventos Corporativos',
-    description: 'Serviço completo para confraternizações e lançamentos',
-  },
-  {
-    icon: '',
-    title: 'Cestas',
-    description: 'Cestas personalizadas para presentear com sabor',
-  },
-  {
-    icon: '',
-    title: 'Estações de Massas',
-    description: 'Massas frescas preparadas na hora para seus convidados',
-  },
+  icon: '',
+  title: 'Itaú',
+  description: 'Eventos corporativos, reuniões e confraternizações com atendimento personalizado.',
+},
+{
+  icon: '',
+  title: 'Bradesco',
+  description: 'Serviços de buffet para encontros empresariais e celebrações internas.',
+},
+{
+  icon: '',
+  title: 'AMBEV',
+  description: 'Experiência gastronômica para eventos corporativos e ações especiais.',
+},
+{
+  icon: '',
+  title: 'LATAM',
+  description: 'Soluções completas de catering para eventos e confraternizações.',
+},
+{
+  icon: '',
+  title: 'Populos',
+  description: 'Eventos e experiências gastronômicas personalizadas para colaboradores e clientes.',
+},
+{
+  icon: '',
+  title: 'Celebridades',
+  description: 'Personalidades como Zico, Narcisa, Marcos & Belutti e outros já prestigiaram a La Sam.',
+},
+  
 ]
 
 function ServiceCard({ service, index }) {
@@ -63,7 +64,7 @@ export default function Services() {
           ref={titleRef}
           className={`animate-on-scroll mb-16 text-center ${titleVisible ? 'visible' : ''}`}
         >
-          <h2 className="section-title text-sam-green">O que fazemos</h2>
+          <h2 className="section-title text-sam-green">Clientes que atendemos!</h2>
           <p className="mx-auto mt-4 max-w-xl text-sam-dark/70">
             Do coffee break ao grande evento — cuidamos de cada detalhe para que
             você e seus convidados vivam uma experiência gastronômica especial.
