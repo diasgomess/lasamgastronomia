@@ -1,6 +1,14 @@
 import { getWhatsAppUrl, siteConfig } from '../config/siteConfig'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
+function WhatsAppIcon({ className = 'h-5 w-5' }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.884 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  )
+}
+
 function InstagramIcon() {
   return (
     <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -16,6 +24,8 @@ function FacebookIcon() {
     </svg>
   )
 }
+
+const mapsUrl = `https://maps.google.com/?q=${encodeURIComponent(siteConfig.local)}`
 
 export default function Contact() {
   const { ref, isVisible } = useScrollAnimation()
@@ -42,26 +52,56 @@ export default function Contact() {
             href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary mt-10 text-base"
+            className="btn-primary mt-8 gap-3 text-base sm:mt-10"
           >
+            <WhatsAppIcon className="h-5 w-5 shrink-0 text-[#25D366]" />
             Chamar no WhatsApp
           </a>
 
-          <div className="mt-12 flex flex-col items-center gap-6 border-t border-sam-gold/20 pt-10 sm:flex-row sm:justify-center sm:gap-12">
-            <div className="text-center">
-              <p className="text-xs font-medium uppercase tracking-wider text-sam-gold/60">
-                Telefone
-              </p>
-              {/* PLACEHOLDER: substituir pelo telefone real */}
-              <p className="mt-1 text-sam-gold">{siteConfig.phone}</p>
-              <p className="mt-1 text-sam-gold">{siteConfig.phone2}</p>
-            </div>
-            <div className="text-center">
-              <p className="text-xs font-medium uppercase tracking-wider text-sam-gold/60">
-                Nós temos loja física, venha conhecer!
-              </p>
-              {/* PLACEHOLDER: substituir pelo e-mail real */}
-              <p className="mt-1 text-sam-gold">{siteConfig.local}</p>
+          <div className="mt-8 border-t border-sam-gold/20 pt-8 sm:mt-12 sm:pt-10">
+            <div className="mx-auto grid max-w-2xl gap-8 sm:grid-cols-2 sm:gap-10">
+              <div className="flex flex-col items-center text-center sm:border-r sm:border-sam-gold/20 sm:pr-8">
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-sam-gold/85">
+                      WhatsApp
+                    </p>
+                    <a
+                      href={getWhatsAppUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 block text-sam-gold transition-colors hover:text-white"
+                    >
+                      {siteConfig.phone}
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-sam-gold/85">
+                      Fixo
+                    </p>
+                    <a
+                      href="tel:+551156790469"
+                      className="mt-1 block text-sam-gold transition-colors hover:text-white"
+                    >
+                      {siteConfig.phone2}
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center text-center sm:pl-8">
+                <p className="text-xs font-semibold uppercase tracking-wider text-sam-gold/85">
+                  Nós temos loja física, venha conhecer!
+                </p>
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 max-w-xs text-sam-gold underline decoration-sam-gold/40 underline-offset-2 transition-colors hover:text-white hover:decoration-white/60"
+                >
+                  {siteConfig.local}
+                </a>
+              </div>
             </div>
           </div>
 
@@ -70,8 +110,8 @@ export default function Contact() {
               href={siteConfig.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-sam-gold/10 p-3 text-sam-gold transition-colors hover:bg-sam-gold/20"
-              aria-label="Instagram — PLACEHOLDER: substituir link"
+              className="rounded-full bg-sam-gold/10 p-3 text-sam-gold transition-all duration-300 hover:scale-110 hover:bg-sam-gold/20 hover:opacity-90"
+              aria-label="Instagram da La Sam Gastronomia"
             >
               <InstagramIcon />
             </a>
@@ -79,8 +119,8 @@ export default function Contact() {
               href={siteConfig.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-sam-gold/10 p-3 text-sam-gold transition-colors hover:bg-sam-gold/20"
-              aria-label="Facebook — PLACEHOLDER: substituir link"
+              className="rounded-full bg-sam-gold/10 p-3 text-sam-gold transition-all duration-300 hover:scale-110 hover:bg-sam-gold/20 hover:opacity-90"
+              aria-label="Facebook da La Sam Gastronomia"
             >
               <FacebookIcon />
             </a>
