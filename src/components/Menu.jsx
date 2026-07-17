@@ -9,36 +9,36 @@ import Lightbox from './Lightbox'
 const galleryImages = [
   {
 
-    src: 'images/image1.jpeg',
+    src: '/images/image1.jpeg',
     spanClass: 'sm:col-span-1 sm:row-span-2',
   },
   {
 
-    src: 'images/image2.jpeg',
+    src: '/images/image2.jpeg',
     spanClass: 'sm:col-span-1 sm:row-span-1',
   },
   {
-    src: 'images/image3.jpeg',
+    src: '/images/image3.jpeg',
     spanClass: 'sm:col-span-1 sm:row-span-1',
   },
   {
-    src: 'images/image4.jpeg',
+    src: '/images/image4.jpeg',
     spanClass: 'sm:col-span-1 sm:row-span-1',
   },
   {
-    src: 'images/image5.jpeg',
+    src: '/images/image5.jpeg',
     spanClass: 'sm:col-span-1 sm:row-span-1',
   },
   {
-    src: 'images/image8.jpeg',
+    src: '/images/image8.jpeg',
     spanClass: 'sm:col-span-1 sm:row-span-2',
   },
   {
-    src: 'images/image7.jpeg',
+    src: '/images/image7.jpeg',
     spanClass: 'sm:col-span-1 sm:row-span-1',
   },
   {
-    src: 'images/image6.jpeg',
+    src: '/images/image6.jpeg',
     spanClass: 'sm:col-span-1 sm:row-span-1',
   },
 ]
