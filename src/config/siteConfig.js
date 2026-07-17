@@ -10,8 +10,9 @@ export const siteConfig = {
 
   // TODO: substituir pelos contatos reais
   phone: '(11) 99621-0079',
-  local: 'Av. Mascote 1429 — Bistrô La Sam Gastronomia',
-  address: 'Av. Mascote 1429 — SP, Bistrô La Sam Gastronomia',
+  local: 'Av. Mascote 1428 — Bistrô La Sam Gastronomia',
+  address: 'Av. Mascote 1428 — SP, Bistrô La Sam Gastronomia',
+  phone2: '5679-0469',
 
   // TODO: substituir pelos links reais das redes sociais
   social: {

@@ -54,10 +54,11 @@ export default function Contact() {
               </p>
               {/* PLACEHOLDER: substituir pelo telefone real */}
               <p className="mt-1 text-sam-gold">{siteConfig.phone}</p>
+              <p className="mt-1 text-sam-gold">{siteConfig.phone2}</p>
             </div>
             <div className="text-center">
               <p className="text-xs font-medium uppercase tracking-wider text-sam-gold/60">
-                LOCALIZAÇÃO
+                Nós temos loja física, venha conhecer!
               </p>
               {/* PLACEHOLDER: substituir pelo e-mail real */}
               <p className="mt-1 text-sam-gold">{siteConfig.local}</p>

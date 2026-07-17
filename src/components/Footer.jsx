@@ -59,6 +59,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-sam-gold/70">
               {/* PLACEHOLDER: substituir pelos dados reais */}
               <li>{siteConfig.phone}</li>
+              <li>{siteConfig.phone2}</li>
               <li>{siteConfig.email}</li>
               <li>{siteConfig.address}</li>
             </ul>
