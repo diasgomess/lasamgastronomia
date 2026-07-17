@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-sam-dark bg-sam-cream antialiased;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-20 sm:px-6 lg:px-8 lg:py-28;
+  }
+
+  .section-title {
+    @apply font-script text-4xl sm:text-5xl lg:text-6xl leading-tight;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sam-gold px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-sam-green transition-all duration-300 hover:bg-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-sam-gold focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-sam-gold px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-sam-gold transition-all duration-300 hover:bg-sam-gold hover:text-sam-green focus:outline-none focus:ring-2 focus:ring-sam-gold focus:ring-offset-2 focus:ring-offset-sam-green;
+  }
+
+  .btn-whatsapp-header {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sam-green px-5 py-2.5 text-sm font-semibold text-sam-gold transition-all duration-300 hover:bg-sam-dark hover:shadow-md focus:outline-none focus:ring-2 focus:ring-sam-green focus:ring-offset-2;
+  }
+
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+.lightbox-overlay {
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
