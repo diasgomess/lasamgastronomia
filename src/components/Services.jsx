@@ -22,13 +22,14 @@ const services = [
     logoUrl: 'public/images/logo_latam.png',
   },
   {
-    title: 'Populos',
-    description: 'Eventos e experiências gastronômicas personalizadas para colaboradores e clientes.',
-    logoUrl: 'public/images/logo_populos.png',
+    title: 'BMG',
+    description: 'Serviço de buffet para eventos corporativos, lançamentos e celebrações internas.',
+    logoUrl: 'public/images/logo_bmg.png',
   },
   {
-    title: 'Celebridades',
-    description: 'Personalidades como Zico, Narcisa, Marcos & Belutti e outros já prestigiaram a La Sam.',
+    title: 'ASICS',
+    description: 'Lançamentos de produtos, eventos esportivos e experiências de marca com serviço de buffet.',
+    logoUrl: 'public/images/logo_asics.png',
   },
 ]
 

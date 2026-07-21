@@ -96,31 +96,30 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Desktop grid */}
-        <div
-          ref={contentRef}
-          className={`animate-on-scroll hidden gap-6 md:grid md:grid-cols-3 ${contentVisible ? 'visible' : ''}`}
-        >
-          {testimonials.map((t) => (
-            <TestimonialCard key={t.id} testimonial={t} />
-          ))}
-        </div>
-
-        {/* Mobile carousel */}
-        <div className={`animate-on-scroll md:hidden ${contentVisible ? 'visible' : ''}`}>
-          <TestimonialCard testimonial={testimonials[current]} />
-          <div className="mt-6 flex justify-center gap-2">
-            {testimonials.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setCurrent(i)}
-                className={`h-2 rounded-full transition-all ${
-                  i === current ? 'w-6 bg-sam-gold' : 'w-2 bg-sam-gold/30'
-                }`}
-                aria-label={`Depoimento ${i + 1}`}
-              />
+        <div ref={contentRef} className={`animate-on-scroll ${contentVisible ? 'visible' : ''}`}>
+          {/* Desktop grid */}
+          <div className="hidden gap-6 md:grid md:grid-cols-3">
+            {testimonials.map((t) => (
+              <TestimonialCard key={t.id} testimonial={t} />
             ))}
+          </div>
+
+          {/* Mobile carousel */}
+          <div className="md:hidden">
+            <TestimonialCard testimonial={testimonials[current]} />
+            <div className="mt-6 flex justify-center gap-2">
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setCurrent(i)}
+                  className={`h-2 rounded-full transition-all ${
+                    i === current ? 'w-6 bg-sam-gold' : 'w-2 bg-sam-gold/30'
+                  }`}
+                  aria-label={`Depoimento ${i + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
