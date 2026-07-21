@@ -4,32 +4,32 @@ const services = [
   {
     title: 'Itaú',
     description: 'Eventos corporativos, reuniões e confraternizações com atendimento personalizado.',
-    logoUrl: 'public/images/logo_itau.png',
+    logoUrl: '/images/logo_itau.png',
   },
   {
     title: 'Bradesco',
     description: 'Serviços de buffet para encontros empresariais e celebrações internas.',
-    logoUrl: 'public/images/logo_bradesco.png',
+    logoUrl: '/images/logo_bradesco.png',
   },
   {
     title: 'AMBEV',
     description: 'Experiência gastronômica para eventos corporativos e ações especiais.',
-    logoUrl: 'public/images/logo_ambev.png',
+    logoUrl: '/images/logo_ambev.png',
   },
   {
     title: 'LATAM',
     description: 'Soluções completas de catering para eventos e confraternizações.',
-    logoUrl: 'public/images/logo_latam.png',
+    logoUrl: '/images/logo_latam.png',
   },
   {
     title: 'BMG',
     description: 'Serviço de buffet para eventos corporativos, lançamentos e celebrações internas.',
-    logoUrl: 'public/images/logo_bmg.png',
+    logoUrl: '/images/logo_bmg.png',
   },
   {
     title: 'ASICS',
     description: 'Lançamentos de produtos, eventos esportivos e experiências de marca com serviço de buffet.',
-    logoUrl: 'public/images/logo_asics.png',
+    logoUrl: '/images/logo_asics.png',
   },
 ]
 
